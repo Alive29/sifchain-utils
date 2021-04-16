@@ -2,7 +2,7 @@
 
 SERVICE_NAME="sifchain.service"
 BIN_NAME="sifnoded"
-BIN_PATH="$HOME/go/bin/"
+BIN_PATH="$HOME/bin/"
 
 
 check_for_update(){
@@ -33,7 +33,7 @@ do
       rm -f ${BIN_PATH}${BIN_NAME}
       mv ${BIN_NAME} ${BIN_PATH}
       echo "Restarting service"
-      systemctl restart ${SERVICE_NAME}
+      sudo systemctl restart ${SERVICE_NAME}
     else
       echo "Binary files are same"
       rm -f ${BIN_NAME}
