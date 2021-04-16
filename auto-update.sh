@@ -6,7 +6,7 @@ BIN_PATH="$HOME/bin/"
 
 
 check_for_update(){
-  CHECK_UPD=$(journalctl -u ${SERVICE_NAME} --since "30 seconds ago" | egrep  "UPGRADE" | head -n 1 | egrep -o "https://.*\.zip")
+  CHECK_UPD=$(journalctl -q -u ${SERVICE_NAME} --since "30 seconds ago" | egrep  "UPGRADE" | head -n 1 | egrep -o "https://.*\.zip")
   echo $CHECK_UPD
 }
 
