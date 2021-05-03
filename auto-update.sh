@@ -2,7 +2,7 @@
 
 SERVICE_NAME="sifchain.service"
 BIN_NAME="sifnoded"
-BIN_PATH="$HOME/bin/"
+BIN_PATH="/home/sifchain/go/bin/"
 
 
 check_for_update(){
